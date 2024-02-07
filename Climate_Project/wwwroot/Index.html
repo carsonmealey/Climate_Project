@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <meta charset="utf-8" />
+    <title>NFL Climate Data</title>
+</head>
+<body>
+    <center>
+        <h1 style="font-size:300%;"><strong>NFL Team Climate Analysis </strong> </h1>
+        <br />
+
+        <h2>Put in your NFL team of choice and the climate.  Once you hit the button, you will see the offensive results of the team and climate.</h2>
+
+        <div>
+            <table style="border:solid 5px">
+                <thead>
+                    <tr>
+                        <td>NFL Team</td>
+                        <td>Climate</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <input type="text" name="NFLTeam" id="NFLTeam"</td>
+                        <td> <input type="text" </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <input type="Submit" value="Randomize" name=RandomButton id=RandomButton onclick=getRandomNFLTeam()>
+        <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+
+        <script>
+
+
+            function getRandomNFLTeam() {
+
+
+
+                const nflTeams = [
+
+                    "Arizona Cardinals",
+
+                    "Atlanta Falcons",
+
+                    "Baltimore Ravens",
+
+                    "Buffalo Bills",
+
+                    "Carolina Panthers",
+
+                    "Chicago Bears",
+                    "Cincinnati Bengals",
+                    "Cleveland Browns",
+                    "Dallas Cowboys",
+                    "Denver Broncos",
+                    "Detroit Lions",
+                    "Green Bay Packers",
+                    "Houston Texans",
+                    "Indianapolis Colts",
+                    "Jacksonville Jaguars",
+                    "Kansas City Chiefs",
+                    "Las Vegas Raiders",
+                    "Los Angeles Chargers",
+                    "Los Angeles Rams",
+                    "Miami Dolphins",
+                    "Minnesota Vikings",
+                    "New England Patriots",
+                    "New Orleans Saints",
+                    "New York Giants",
+                    "New York Jets",
+                    "Philadelphia Eagles",
+                    "Pittsburgh Steelers",
+                    "San Francisco 49ers",
+                    "Seattle Seahawks",
+                    "Tampa Bay Buccaneers",
+                    "Tennessee Titans",
+                    "Washington Football Team"
+
+                ];
+
+
+
+                // Generate a random index to select a random NFL team
+
+                const randomIndex = Math.floor(Math.random() * nflTeams.length);
+
+
+
+                // Return the random NFL team
+
+                document.getElementById("NFLTeam").placeholder = nflTeams[randomIndex];
+
+                return nflTeams[randomIndex];
+
+            }
+
+
+
+            // Example usage
+
+            const randomTeam = getRandomNFLTeam();
+
+            console.log("Random NFL Team: ", randomTeam);
+        </script>
+    </center>
+</body >
+</html >
